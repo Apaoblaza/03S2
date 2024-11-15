@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center">
+    <h1>Puedes llevar hasta 10 stickers de perros</h1>
+    <div style="display: flex">
+      <div style="align-items: center">
+        <img style="width: 20rem" src="https://placedog.net/500" />
+        <input style="text" id="valor1" />
+      </div>
+      <div>
+        <img style="width: 20rem" src="https://placedog.net/501" />
+        <input style="text" id="valor2" />
+      </div>
+      <div>
+        <img style="width: 20rem" src="https://placedog.net/502" />
+        <input style="text" id="valor3" />
+      </div>
+    </div>
+    <button
+      style="margin: 5rem"
+      onclick="
+        valor1=document.querySelector('#valor1').value;
+        valor2=document.querySelector('#valor2').value;
+        valor3=document.querySelector('#valor3').value;
+        respuesta=document.querySelector('#respuesta')
+        if(Number(valor1)<0){
+            alert('Debes ingresar numeros mayores que cero')
+        }
+        if(Number(valor2)<0){
+            alert('Debes ingresar numeros mayores que cero')
+        }
+        if(Number(valor3)<0){
+            alert('Debes ingresar numeros mayores que cero')
+        }
+        total=Number(valor1)+Number(valor2)+Number(valor3);
+        if(isNaN(total)){
+            alert('Debes ingresar solo numeros');
+            respuesta.innerHTML='';
+        }else{
+        resto=total-10;
+        total>10?respuesta.innerHTML='Te excedes en '+(total-10)+' sticker de perros. Elige máximo 10 en total.':respuesta.innerHTML='Llevas '+total+' stickers de perros.';
+        }
+    
+    
+    
+    "
+    >
+      Verificar
+    </button>
+
+    <p style="margin-top: 2rem" id="respuesta"></p>
+  </body>
+</html>

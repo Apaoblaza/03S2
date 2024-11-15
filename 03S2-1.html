@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img
+      src="https://placedog.net/500"
+      alt="dog"
+      id="img"
+      style="border: solid red; border-width: 0px"
+      onclick="
+        img=document.querySelector('#img')
+        if(img.style.borderWidth=='0px'){
+            img.style.borderWidth='2px';
+        }else{
+            img.style.borderWidth='0px';
+        }
+
+      
+
+      "
+    />
+  </body>
+</html>

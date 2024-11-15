@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center">
+    <h1>Ingresar el Password</h1>
+    <div
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 5rem;
+      "
+    >
+      <select id="valor1">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <select id="valor2">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+      <select id="valor3">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+    </div>
+    <button
+      style="margin-top: 5rem"
+      onclick="
+      v1=document.querySelector('#valor1').value;
+      v2=document.querySelector('#valor2').value;
+      v3=document.querySelector('#valor3').value;
+      respuesta1=document.querySelector('#respuesta1');
+      respuesta2=document.querySelector('#respuesta2');
+       if(v1==9&&v2==1&&v3==1){
+         respuesta1.innerHTML='Password 1 Correcto';
+         respuesta2.innerHTML='';
+        }
+        else if(v1==7&&v2==1&&v3==4){
+         respuesta2.innerHTML='Password 2 Correcto';
+         respuesta1.innerHTML='';
+        }
+        else{
+             respuesta1.innerHTML='Password Incorrecto';
+             respuesta2.innerHTML='';
+        }    
+    "
+    >
+      Verificar Password
+    </button>
+    <p id="respuesta1"></p>
+    <p id="respuesta2"></p>
+  </body>
+</html>
